@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} Create {% endblock %}}
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}} <!--자동으로 폼형성-->
+        <!--views.py 에서 fields=['site_name','url']을 작성했기 때문에 site_name, 과 url에 대한 폼이 models.py 에 맞춰서 생성됨-->
+        <input type="submit" value="Add" class="bth btn-info btn-sm">
+    </form>
+
+{% endblock %}
